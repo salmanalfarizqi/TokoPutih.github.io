@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko Putih</title>
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css"
+    />
+    <style>
+      img {
+        width: 100px;
+      }
+      .col {
+        float: left;
+        margin-left: 70px;
+        padding-top: 30px;
+      }
+      .col a {
+        color: #ffff;
+        text-decoration: none;
+        background-color: #2c3333;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 40px;
+        margin-top: 30px;
+      }
+      .col a:hover {
+        background-color: #30aadd;
+        color: #ffff;
+        transition: all 0.5s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+      }
+      .back {
+        font-size: 30px;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+
+      .back a i {
+        color: black;
+        padding: 5px 5px 5px 5px;
+      }
+
+      .back a i:hover {
+        color: #eeeeee;
+        background-color: #2c3333;
+        padding: 5px 5px 5px 5px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        transition: all 0.5s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+      }
+
+      .Label {
+        font-size: 25px;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+
+      .Price {
+        font-size: 15px;
+      }
+
+      .Jumlah {
+        padding: 20px 50px;
+        box-sizing: border-box;
+        border-radius: 7px;
+      }
+
+      .Buat {
+        text-decoration: none;
+        background-color: #2c3333;
+        color: #ffff;
+        box-sizing: border-box;
+        border-radius: 5px;
+        margin-left: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .Buat:hover {
+        background-color: #30aadd;
+        color: #ffff;
+        transition: all 0.5s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+      }
+
+      .alamat {
+        background-color: #eeeeee;
+        padding: 10px 60px;
+        box-sizing: border-box;
+        border-radius: 7px;
+      }
+
+      .option {
+        padding: 20px 60px;
+        box-sizing: border-box;
+        border-radius: 7px;
+      }
+
+      .keterangan {
+        padding: 20px 70px;
+        box-sizing: border-box;
+        border-radius: 7px;
+        border: black solid 1px;
+      }
+      
+      .option2{
+        padding: 20px 100px;
+        box-sizing: border-box;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav -->
+    <div class="back">
+      <a onclick="var yakin = confirm('Apakah Anda Ingin Membatalkan Pembayaran?');
+      if(yakin) {
+            document.location.href = 'index.html';
+        } else {
+            return false;
+        }" href="#">
+      <i class="fa-solid fa-angles-left"></i>
+    </a>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="./img/download.jpg" alt="" />
+      </div>
+      <div class="col">
+        <p class="Label"><b>Keyboard Logitech</b></p>
+        <p class="Price">Rp 1.200.000</p>
+      </div>
+      <div class="col">
+        <input
+          class="Jumlah"
+          type="number"
+          placeholder="Jumlah Barang"
+          max="20"
+          min="1"
+        />
+        <br />
+        <br />
+        <a class="Buat" 
+        onclick=" var yakin = confirm('Apakah Anda yakin Data Yang Anda Masukkan Sudah Benar?');
+        if(yakin) {
+            alert('Pesanan Anda Sedang Di Proses');
+            document.location.href = 'index.html';
+        } else {
+            return false;
+        }">buat Pesanan</a>
+      </div>
+      <div class="col">
+        <div class="alamat">
+          <p>alamat Pengiriman dan Metode Pembayaran</p>
+          <p>pilih Provinsi</p>
+          <select class="option" name="Provinsi" id="">
+            <option>1.Nanggore Aceh Darusalam</option>
+            <option>2.Sumatra Utara</option>
+            <option>3.Sumatra Barat</option>
+            <option>4.Sumatra Selatan</option>
+            <option>5.Riau</option>
+            <option>6.Kepulauan Riau</option>
+            <option>7.Jambi</option>
+            <option>8.Bengkulu</option>
+            <option>9.Lampung</option>
+            <option>10.Bangka Belitung</option>
+            <option>11.Banten</option>
+            <option>12.DKI Jakarta</option>
+            <option>13.Jawa Barat</option>
+            <option>14.Jawa Tengah</option>
+            <option>15.Jawa Timur</option>
+            <option>16.Kalimantan Barat</option>
+            <option>17.Kalimantan Selatan</option>
+            <option>18.Kalimantan Tengah</option>
+            <option>19.Kalimantan Timur</option>
+            <option>20.Kalimantan Utara</option>
+            <option>21.Bali</option>
+            <option>22.Nusa Tenggara Barat</option>
+            <option>23.Nusa Tenggara Timur</option>
+            <option>24.Sulawesi Utara</option>
+            <option>25.Sulawesi Tengah</option>
+            <option>26.Sulawesi Selatan</option>
+            <option>27.Sulawesi Tenggara</option>
+            <option>28.Gorontalo</option>
+            <option>29.Sulawesi Barat</option>
+            <option>30.Maluku</option>
+            <option>31.Maluku Utara</option>
+            <option>32.Papua Barat</option>
+            <option>33.Papua</option>
+          </select>
+          <p>Masukan Alamat Lengkap Nama Kota Beserta Kode Pos dan patokan</p>
+          <input class="keterangan" type="text" />
+
+            <p>Pilih Metode Pembayaran</p>
+            <select class="option2" name="Metode" id="">
+              <option>1.Transfer Bank</option>
+              <option>2.COD</option>
+              <option>3.Kredit</option>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
